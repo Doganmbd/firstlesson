@@ -1,11 +1,29 @@
 
 import './App.css';
 import Header from "./component/header";
+import User from "./component/props";
+import Listem from "./component/list";
 
 const name = "Mustafa Bilal"
 const surname = "DOĞAN"
 
 const isLog = false
+
+
+const kanks= [
+  {
+    id:1,
+    ad:"ömer",
+  },
+  {
+    id:2,
+    ad:"ali",
+  },
+  {
+    id:3,
+    ad:"mbd",
+  }
+]
 
 function App() {
   return (
@@ -16,11 +34,22 @@ function App() {
       <h1>{name}{surname}</h1>
       <h1>{`benim adım ${name},  soyadım ${surname}`}</h1>
       <h1>{isLog && `İkinci defa söylüyorum Benim adım ${name}`}</h1>
-      <h1>{!isLog && `İkinci defa söylüyorum Benim adım ${name} değil. `}</h1>
-      <h1>{isLog ? `İkinci defa söylüyorum Benim adım ${name}` : `İkinci defa söylüyorum Benim adım ${name} değil. `}</h1>
+      <h1>{!isLog && ` değil. `}</h1>
+      <h1>{isLog ? `İkinci defa söylüyorum Benim adım ${name}` : `İkinci defa değil. `}</h1>
 
+  {/* props  
+  User a eklediğim property i componentmde kullanmak istiyorum.*/}
+      <User
+      name="bilal" 
+      surname= "doğan" 
+      isLoggedIn={true} 
+      age={29} 
+      friends = {["ahmet" , "mehemt","ali","veli"]} />
 
       
+      <Listem 
+      kanki ={kanks}
+      />
     </div>
   );
 }
