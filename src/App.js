@@ -40,7 +40,7 @@ function App() {
   {/* props  
   User a eklediğim property i componentmde kullanmak istiyorum.*/}
       <User
-      name="bilal" 
+      name="{123} "
       surname= "doğan" 
       isLoggedIn={true} 
       age={29} 

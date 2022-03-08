@@ -9,6 +9,9 @@
 }
 
 export default User ; */
+
+import Prop from "prop-types";
+
  function User({age,name,surname,isLoggedIn,friends }) {
     
     return (
@@ -23,6 +26,14 @@ export default User ; */
         
         </>
     )
+}
+
+User.propTypes = {
+    name :Prop.string ,
+    surname:Prop.string,
+    isLoggedIn : Prop.bool,
+    friends:Prop.array,
+
 }
 
 export default User ; 
